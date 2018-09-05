@@ -1,0 +1,19 @@
+{
+  "name": "sandMD",
+  "description": "CodiMD app for Sandstorm platform",
+  "version": "0.0.0",
+  "private": false,
+  "main": "./app.js",
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "node rproxy.js",
+    "start_all": "npm start --prefix codimd & npm start --prefix saml-idp & npm start"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "http-proxy": "^1.17.0",
+    "concurrently": "^3.6.1"
+  }
+}
