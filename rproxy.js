@@ -14,6 +14,14 @@ app.all("/saml/*", function(req, res) {
     testAndProxy(req, res, 7000, saml);
 });
 
+app.all("/css/main.css", function(req, res) {
+    testAndProxy(req, res, 7000, saml);
+});
+
+app.all("/css/bootstrap.css", function(req, res) {
+    testAndProxy(req, res, 7000, saml);
+});
+
 app.all("/signin", function(req, res) {
     testAndProxy(req, res, 7000, saml);
 });

@@ -135,6 +135,7 @@ opt/app/codimd/lib/web/auth/saml/index.js
 opt/app/codimd/lib/web/auth/utils.js
 opt/app/codimd/lib/web/baseRouter.js
 opt/app/codimd/lib/web/historyRouter.js
+opt/app/codimd/lib/web/imageRouter/imgur.js
 opt/app/codimd/lib/web/imageRouter/index.js
 opt/app/codimd/lib/web/middleware/checkURIValid.js
 opt/app/codimd/lib/web/middleware/codiMDVersion.js
@@ -944,6 +945,14 @@ opt/app/codimd/node_modules/iconv-lite/lib/streams.js
 opt/app/codimd/node_modules/iconv-lite/package.json
 opt/app/codimd/node_modules/ienoopen/index.js
 opt/app/codimd/node_modules/ienoopen/package.json
+opt/app/codimd/node_modules/imgur/lib/imgur.js
+opt/app/codimd/node_modules/imgur/node_modules/glob/common.js
+opt/app/codimd/node_modules/imgur/node_modules/glob/glob.js
+opt/app/codimd/node_modules/imgur/node_modules/glob/package.json
+opt/app/codimd/node_modules/imgur/node_modules/glob/sync.js
+opt/app/codimd/node_modules/imgur/node_modules/minimatch/minimatch.js
+opt/app/codimd/node_modules/imgur/node_modules/minimatch/package.json
+opt/app/codimd/node_modules/imgur/package.json
 opt/app/codimd/node_modules/inflection/lib/inflection.js
 opt/app/codimd/node_modules/inflection/package.json
 opt/app/codimd/node_modules/inflight/inflight.js

@@ -2,6 +2,11 @@
  * bootstrap overrides
  */
 
+body {
+  display: none;
+  background-color: midnightblue;
+}
+
 .form-control-static {
 	overflow-wrap: break-word;
 }
