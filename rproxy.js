@@ -1,10 +1,12 @@
-var express  = require('express');
-var net = require('net');
-var app      = express();
-var httpProxy = require('http-proxy');
-var apiProxy = httpProxy.createProxyServer({ ws: true });
-var codiMD = 'http://127.0.0.1:3000',
-    saml = 'http://127.0.0.1:7000';
+const express  = require('express');
+const net = require('net');
+const Browser = require('browser-detect');
+const app = express();
+const path = require('path');
+const httpProxy = require('http-proxy');
+const apiProxy = httpProxy.createProxyServer({ ws: true });
+const codiMD = 'http://127.0.0.1:3000',
+      saml = 'http://127.0.0.1:7000';
 
 app.all("/bower_components/*", function(req, res) {
     testAndProxy(req, res, 7000, saml);
@@ -26,9 +28,23 @@ app.all("/signin", function(req, res) {
     testAndProxy(req, res, 7000, saml);
 });
 
+app.all("/", function (req, res) {
+  let browser = Browser(req.headers['user-agent']);
+  if (browser.name === 'ie') {
+    res.sendFile(path.join(__dirname + '/ie-hint.html'));
+  } else {
+    testAndProxy(req, res, 3000, codiMD);
+  }
+});
+
+app.get('/no-ie.png', function (req, res) {
+  res.sendFile(path.join(__dirname + '/no-ie.png'));
+});
+
 app.all("/*", function(req, res) {
     testAndProxy(req, res, 3000, codiMD);
 });
+
 
 var server = require('http').createServer(app);
 // Proxy websockets
