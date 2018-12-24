@@ -73,8 +73,6 @@ function pageInit () {
           $('.ui-welcome').show()
           if (data.photo) $('.ui-avatar').prop('src', data.photo).show()
           else $('.ui-avatar').prop('src', '').hide()
-      console.log('data=');
-      console.dir(data);
           $('.ui-name').html(data.name)
           $('.ui-signout').show()
           $('.ui-history').click()

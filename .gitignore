@@ -3,3 +3,4 @@ sandstorm-keyring
 pgp-keyring
 pgp-signature
 package-lock.json
+node_modules

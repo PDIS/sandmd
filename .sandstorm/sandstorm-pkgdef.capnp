@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "SandMD"),
 
-    appVersion = 0,  # Increment this for every release.
+    appVersion = 2,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "0.0.0"),
+    appMarketingVersion = (defaultText = "0.2.0"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -115,7 +115,7 @@ const pkgdef :Spk.PackageDefinition = (
       # in an app store. Note that the Markdown is not permitted to contain HTML nor image tags (but
       # you can include a list of screenshots separately).
 
-      shortDescription = (defaultText = "Markdown note"),
+      shortDescription = (defaultText = "Markdown document editor"),
       # A very short (one-to-three words) description of what the app does. For example,
       # "Document editor", or "Notetaking", or "Email client". This will be displayed under the app
       # title in the grid view in the app market.
@@ -126,7 +126,7 @@ const pkgdef :Spk.PackageDefinition = (
         # screenshots on a Retina-style high DPI screen, divide each dimension by two.
 
         #(width = 746, height = 795, jpeg = embed "path/to/screenshot-1.jpeg"),
-        #(width = 640, height = 480, png = embed "path/to/screenshot-2.png"),
+        (width = 960, height = 480, png = embed "asset/screenshot.png"),
       ],
       changeLog = (defaultText = embed "asset/changelog.md"),
       # Documents the history of changes in Github-flavored markdown format (with the same restrictions
